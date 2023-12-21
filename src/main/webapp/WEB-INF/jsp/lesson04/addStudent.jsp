@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 가입</title>
+<title>학생 추가</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
 	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
@@ -20,28 +20,29 @@
 </head>
 <body>
 	<div class="container">
-		<h1>회원가입</h1>
+		<h1>학생추가</h1>
 		
-		<form method="post" action="/lesson04/ex01/add-user">
+		<form method="post" action="/lesson04/ex02/add-student">
 			<div class="form-group">
 				<label for="name">이름</label>
 				<input type="text" id="name" name="name" class="form-control col-4" placeholder="이름을 입력하세요">
 			</div>
 			<div class="form-group">
-				<label for="yyyymmdd">생년월일</label>
-				<input type="text" id="yyyymmdd" name="yyyymmdd" class="form-control col-4" placeholder="예) 19951207">
+				<label for="phoneNumber">전화번호</label>
+				<input type="text" id="phoneNumber" name="phoneNumber" class="form-control col-4">
 			</div>
 			<div class="form-group">
 				<label for="email">이메일</label>
 				<input type="text" id="email" name="email" class="form-control col-4">
 			</div>
 			<div class="form-group">
-				<label for="introduce">자기소개</label>
-				<textarea id="introduce" name="introduce" class="form-control"></textarea>
+				<label for="dreamJob">장래희망</label>
+				<input type="text" id="dreamJob" name="dreamJob" class="form-control col-4">
 			</div>
-			
-			<button type="submit" class="btn btn-primary">회원가입</button>
+						
+			<button type="submit" class="btn btn-primary">추가</button>
 		</form>
+
 	</div>
 </body>
 </html>
