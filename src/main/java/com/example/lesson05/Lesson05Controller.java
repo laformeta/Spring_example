@@ -1,6 +1,7 @@
 package com.example.lesson05;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class Lesson05Controller {
 	public String ex01() {
 		return "lesson05/ex01";
 	}
-	
+
 	@GetMapping("/ex02")
 	public String ex02(Model model) {
 		// List<String>
@@ -40,5 +41,20 @@ public class Lesson05Controller {
 		model.addAttribute("users", users);
 		
 		return "lesson05/ex02";
+		
 	}
+
+		@GetMapping("/ex03")
+		public String ex03(Model model) {
+			Date now = new Date();
+			model.addAttribute("now", now);
+			
+			return "lesson05/ex03";
+		}
+		
+		@GetMapping("/ex04")
+		public String ex04(Model model) {
+			
+			return "lesson05/ex04";
+		}
 }
