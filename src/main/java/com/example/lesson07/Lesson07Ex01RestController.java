@@ -29,4 +29,20 @@ public class Lesson07Ex01RestController {
 		// 방금 insert 된 pk id도 바로 얻어낼 수 있음
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
+	
+	// U: Update
+		@GetMapping("/2")
+		public StudentEntity update() {
+			// id가 5번인 dreamJob 변경
+			// 5, 디자이너
+			return studentBO.updateStudentDreamJobById(5, "디자이너");
+		}
+		
+		// D: Delete
+		@GetMapping("/3")
+		public String delete() {
+			// id:6
+			studentBO.deleteStudentById(3);
+			return "삭제 완료";
+		}
 }

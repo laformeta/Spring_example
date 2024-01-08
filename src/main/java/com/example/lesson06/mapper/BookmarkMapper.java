@@ -1,8 +1,8 @@
 package com.example.lesson06.mapper;
 
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
-@Repository
+@Mapper
 public interface BookmarkMapper {
 
 	public void insertBookmark(String name, String url);
