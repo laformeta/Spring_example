@@ -49,4 +49,9 @@ public class Lesson07Ex02RestController {
 		// 9. id가 1 ~ 5인 데이터 조회(between)
 		return studentRepository.findByIdBetween(1, 5);
 	}
+	
+	@GetMapping("/2")
+	public List<StudentEntity> getStudent() {
+		return studentRepository.findByDreamJob("개발자");
+	}
 }

@@ -9,7 +9,7 @@ import com.example.lesson04.bo.StudentBO;
 import com.example.lesson07.entity.StudentEntity;
 import com.example.lesson07.repository.StudentRepository;
 
-@RequestMapping("/lesson07")
+@RequestMapping("/lesson07/ex01")
 @RestController
 public class Lesson07Ex01RestController {
 
@@ -19,7 +19,7 @@ public class Lesson07Ex01RestController {
 	
 	
 	// c: create
-	@GetMapping("/ex01/1")
+	@GetMapping("/1")
 	public StudentEntity create() {
 		String name = "김성훈";
 		String phoneNumber = "010-1111-1111";
@@ -41,7 +41,7 @@ public class Lesson07Ex01RestController {
 		// D: Delete
 		@GetMapping("/3")
 		public String delete() {
-			// id:6
+			// id:3
 			studentBO.deleteStudentById(3);
 			return "삭제 완료";
 		}
